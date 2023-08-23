@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Florencia Ceresa</title>
     <!--Iconos Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--Iconos bootstrap-->
     <!--Hola de estilo Bootstrap-->
@@ -17,34 +17,39 @@
 </head>
 <body>
     <!--HEADER-->
-    <header id="home">
-        <nav class="navbar navbar-shrink" id="mainNav">
-            <div class="container">
-                    <div class="navbar-left">
-                        <ul class="navbar-list">
-                            <li><a href="#home" class="navbar-link active">INICIO</a></li>
-                            <li><a href="#about" class="navbar-link">SOBRE MÍ</a></li>
-                            <li><a href="#portfolio" class="navbar-link">PORTFOLIO</a></li>
-                            <li><a href="#contact" class="navbar-link">CONTACTO</a></li>
-                        </ul>
-                    </div>
-                    <div class="navbar-right">
-                        <ul class="navbar-list">
-                            <li><a href="https://www.linkedin.com/in/florenciaceresa/" target="_blank"><span><i class="navbar-icon bi-linkedin"></i></span></a></li>
-                            <li><a href="https://github.com/florenciaceresa" target="_blank"><span><i class="navbar-icon bi-github"></i></span></a></li>
-                            <li><a href="https://www.behance.net/florenciaceresa" target="_blank"><span><i class="navbar-icon bi-behance"></i></span></a></li>
-                        </ul>
-                    </div>
-            </div>
-        </nav>
-        <div class="description">
-            <h1>FLORENCIA CERESA
-                <span>Diseñadora y desarrolladora web</span>
-            </h1>
+    <header id="header">
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
+        <ul class="header-list" id="menu">
+            <div class="items">
+                <li><a href="#home" class="active">INICIO</a></li>
+                <li><a href="#about">SOBRE MÍ</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACTO</a></li>
+            </div>
+            <div class="icons">
+                <li><a href="https://www.linkedin.com/in/florenciaceresa/" target="_blank"><span><i class="bi-linkedin"></i></span></a></li>
+                <li><a href="https://github.com/florenciaceresa" target="_blank"><span><i class="bi-github"></i></span></a></li>
+                <li><a href="https://www.behance.net/florenciaceresa" target="_blank"><span><i class="bi-behance"></i></span></a></li>
+            </div>
+        </ul>
     </header>
 
+
     <main>
+        <!--BANNER-->
+        <section class="banner" id="home">
+            <div class="container">
+                <h1>FLORENCIA CERESA
+                    <span>Diseñadora y desarrolladora web</span>
+                </h1>
+            </div>
+        </section>
+
+
         <!--ABOUT-->
         <section class="page-section" id="about">
             <div class="container-section">
@@ -55,12 +60,13 @@
                     <p>Me encantan las infinitas oportunidades que ofrece la tecnología, el aprendizaje continuo y el poder fusionar todos los conocimientos adquiridos.</p>
                     <a href="about.html"><button type="button" class="btn btn-outline" id="btn-1">&nbsp;&nbsp;&nbsp;&nbsp;Leer más&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
                 </article>
-                <article>
+                <article class="img-about">
                     <img src="assets/img/fotoperfil.jpg" alt="Florencia Ceresa"> 
                 </article>
             </div>
         </section>
         
+
         <!--SKILLS-->
         <section class="page-section" id="skills">
             <div class="container-section">
@@ -87,6 +93,7 @@
                 </article>
             </div>
         </section>
+        
         
         <!--PORTFOLIO-->
         <section class="page-section" id="portfolio">
@@ -170,8 +177,13 @@
             </div>
         </section>
     </main>
+    
+    
+    <!--FOOTER-->
     <footer>
         <div>Copyright &copy; 2023&nbsp; |&nbsp; Diseño y desarrollo hecho por Florencia Ceresa</div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

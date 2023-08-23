@@ -22,139 +22,104 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+
+
+/* HEADER */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    transition: 0.6s;
+    padding: 20px 150px;
+    z-index: 10000;
+  }
+
+  
+  header.sticky {
+    padding: 20px 150px;
+    background: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    list-style: none;
+    padding: 0;
+  }
+  
+  .header-list li a {
+    color: #fff;
+    font-family: var(--first-font-family);
+    display: flex;
+  }
+  
+  .header-list li a:hover {
+    color: var(--first-color);
+  }
+  
+  .header-list a.active {
+    color: var(--first-color);
+  }
+  
+  .header-list .items {
+    font-size: 0.9rem;
+  }
+  
+  .header-list .icons i {
+    font-size: 1.2rem;
+  }
+  
+  .items,
+  .icons {
+    display: flex;
+    gap: 20px;
   }
   
   
-/* HEADER */
-/*Imagen de fondo*/
-header {
-  background: linear-gradient(to bottom, rgba(5, 5, 5, 0.6) 0%, rgba(5, 5, 5, 0.6) 100%), url("../assets/img/escritorio.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
+
+/* BANNER */
+.banner {
+  position: relative;
+  width: 100%;
   height: 100vh;
-  padding-bottom: 0;
+  background: linear-gradient(to bottom, rgba(5, 5, 5, 0.6) 0%, rgba(5, 5, 5, 0.6) 100%), url("../assets/img/escritorio.jpg");
+  background-size: cover;
 }
 
+header.sticky .logo,
+header.sticky ul li a {
+  color: #000;
+}
+
+
 /*Florencia Ceresa - Diseñadora y desarrolladora web*/
-.description {
+.container {
   display: flex;
-  text-align: center;
-  justify-content: center; 
-  align-items: center; 
-  white-space: pre-line;  
-  margin-top: 200px;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-    font-family: var(--first-font-family);
-    color: #fff;
-    font-size: 1.2rem !important; 
-    font-weight: lighter;
-    line-height: 2.5rem;
+  color: #fff;
+  font-family: var(--first-font-family);
+  font-size: 1.3rem !important; 
+  white-space: pre-line;
+  text-align: center;
+  line-height: 2.3rem;
 }
 
 span {
-    font-family: var(--second-font-family);
-    font-size: 2rem;
+  font-family: var(--second-font-family);
+  font-size: 2rem;
 }
-
-
-
-
-/* NAV */
-/* Barra de navegación */
-.navbar {
-  top: 0; 
-  width: 100%;
-}
-
-/* Estilos del contenedor */
-.container {
-  width: 75%; 
-  height: 80px;
-  margin: 0 auto; 
-  padding: 10px 0; 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Estilos de los contenedores de la izquierda y la derecha */
-.navbar-left,
-.navbar-right {
-  display: flex;
-  align-items: center;
-}
-
-/* Estilos de la lista de navegación */
-.navbar-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  font-family: var(--first-font-family);
-  gap: 30px;
-}
-
-/* Estilos de los elementos de la lista */
-.navbar-list li {
-  margin: 0;
-}
-
-/* Estilos de los enlaces */
-.navbar-list a {
-    text-decoration: none;
-    color: white;
-    font-size: 0.8rem;
-}
-
-/*Color del item activo de la barra de navegación*/
-.navbar-left .navbar-link.active {
-    color: var(--first-color) !important; 
-}
-
-/*Color de los items:hover de la barra de navegación*/
-.navbar-list a:hover { 
-    color: var(--first-color); 
-}
-
-/* Estilos de los iconos */
-.navbar-icon {
-    font-size: 1rem;
-}
-
-/* 
-Color de la barra de navegación
-#mainNav.navbar-shrink { 
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    background-color: #fff;
-  }
-
-Color de los items de la barra de navegación al hacer scroll
-#mainNav.navbar-shrink .navbar-list a { 
-    color: var(--font-first-color);
-}
-
-Color de los items:hover de la barra de navegación al hacer scroll
-#mainNav.navbar-shrink .navbar-list a:hover { 
-    color:var(--first-color);
-    transition: all 0.3s ease-out;
-  }
-
-Color de los íconos de la barra de navegación al hacer scroll
-#mainNav.navbar-shrink .navbar-icon { 
-    color: var(--font-first-color);
-}
-
-Color de los íconos:hover de la barra de navegación al hacer scroll
-#mainNav.navbar-shrink .navbar-icon:hover { 
-    color: var(--first-color);
-    transition: all 0.3s ease-out;
-  }
-  */
 
 
 
@@ -171,6 +136,7 @@ Color de los íconos:hover de la barra de navegación al hacer scroll
   h2 {
     font-family: var(--first-font-family);
     font-size: 1.5rem;
+    margin-top: 1rem;
   }
 
   p {
@@ -178,6 +144,11 @@ Color de los íconos:hover de la barra de navegación al hacer scroll
     font-size: 1rem;
     padding-top: 1rem;
     white-space: pre-line;  
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
  
 
@@ -289,4 +260,171 @@ Color de los íconos:hover de la barra de navegación al hacer scroll
      }
 
      
-     
+
+
+
+
+
+
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  /* HEADER */
+  /* BOTON HAMBURGUESA */
+  
+  
+  .bar {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .bar.clicked {
+    color: var(--first-color);
+  }
+
+  
+  /* Muestra el botón hamburguesa */
+  .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      z-index: 1000;
+      cursor: pointer;
+  }
+
+
+  
+
+
+  #menu .items {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    list-style: none;
+    padding: 0; 
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: #fff;
+    width: 100%;
+    height: 42vh;
+    padding-top: 70px;
+    padding-left: 30px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.header-list .items li a {
+  color: var(--font-first-color);
+  padding-top: 20px;
+}
+
+.header-list .items li a:hover {
+  color: var(--first-color);
+}
+
+.header-list .items li a.active {
+  color: var(--first-color);
+}
+
+
+.menu-open .header-list {
+  display: block;
+}
+
+.header-list .icons {
+  display: none;
+}
+
+
+
+/* BANNER */
+h1 {
+  font-size: 1rem !important; 
+}
+
+span {
+  font-size: 1.5rem;
+}
+
+
+
+/* ABOUT */
+.container-section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+.img-about {
+  margin: 2rem 0;
+}
+
+.col-lg-6 {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-family: var(--first-font-family);
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#btn-1 {
+  display: block; 
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+
+
+
+
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* PORTFOLIO */
+.projects {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+
+/* CONTACT */
+.contact-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-lg-5 {
+  margin-bottom: 3rem;
+}
+
+
+/* FOOTER */
+footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+
+   
+
+}
