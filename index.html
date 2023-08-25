@@ -146,30 +146,26 @@
                             <a href="https://github.com/florenciaceresa" target="_blank"><i class="bi bi-github fs-3 me-4"></i></a>
                             <a href="https://www.behance.net/florenciaceresa" target="_blank"><i class="bi bi-behance fs-3"></i></a>
                         </div>
+                        <!--FORM-->
                         <div class="col-lg-7">
-                            <form action="https://formsubmit.co/soyflorenciaceresa@gmail.com" method="POST"> 
+                            <form class="contact-form"> 
                                 <div class="mb-4">
-                                  <label class="form-label" for="name">Nombre</label>
-                                  <input type="text" class="form-control form-control-sm" id="name" name="name" required>
+                                  <label for="name">Nombre y apellido</label>
+                                  <input type="text" name="name" class="input-form" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
                                 </div>
                                 <div class="mb-4">
-                                  <label class="form-label" for="email">Email</label>
-                                  <input type="email" class="form-control form-control-sm" id="email" name="email" required>
+                                  <label for="email">Correo electrónico</label>
+                                  <input type="email" name="email" class="input-form" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
                                 </div>
                                 <div class="mb-4">
-                                  <label class="form-label" for="comments">Mensaje</label>
-                                  <textarea
-                                    rows="3"
-                                    class="form-control form-control-sm"
-                                    id="comments"
-                                    name="comments"
-                                    required
-                                  ></textarea>
+                                  <label for="comments">Mensaje</label>
+                                  <textarea rows="3" name="comments" title="Tu comentario no debe exceder los 300 caracteres" data-pattern="^.{1,255}$" required></textarea>
                                 </div>
                                 <div class="mb-3">
-                                  <input class="btn btn-secondary" type="submit"/>
-                                  <input type="hidden" name="_next" value="http://127.0.0.1:5500/gracias.html">
-                                  <input type="hidden" name="_subject" value="Mensaje de mi página web">
+                                  <input class="btn btn-secondary" type="submit" value="Enviar"/>
+                                </div>
+                                <div>
+                                    <p class="contact-form-response none">Los datos fueron enviados</p>
                                 </div>
                               </form>
                         </div>
@@ -187,7 +183,7 @@
 
 
     <!--MODAL-->
-    <section class="modal" id="myModal">
+    <div class="modal" id="myModal">
         <div class="modal-container">
             <a href="#" class="modal-close" id="modalClose"><i class="bi bi-x"></i></a>
             <img src="assets/img/diseñoweb.jpg" alt="Proyecto" class="modal-img" id="modalImg">
@@ -195,7 +191,9 @@
             <p class="modal-paragraph" id="modalParagraph"></p>
             <a href="about.html" id="modalLink"><button type="button" class="btn btn-outline see-project" id="btn-1">Ver proyecto completo</button></a>
         </div>
-    </section>
+    </div>
+        
+    
 
 
     <script src="js/script.js"></script>

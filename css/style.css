@@ -305,7 +305,6 @@ span {
         background: var(--second-color);
      }
 
-
      .contact-item {
       display: flex;
       margin-top: 4rem;
@@ -319,8 +318,64 @@ span {
 
      #contact a:hover {
       color: #fff;
-
      }
+
+     .contact-form {
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+     }
+
+     .input-form, textarea {
+      display: block;
+      width: 100%;
+      padding: 0.2rem;
+      border-radius: 3px;
+     }
+
+     label {
+      margin-bottom: 0.5rem;
+     }
+
+     .contact-form-response {
+      font-weight: bold;
+     }
+
+     .contact-form [required]:valid {
+      border: thin solid green;
+     }
+
+     .contact-form [required]:invalid {
+      border: thin solid red;
+     }
+
+     .contact-form-error {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      transition: all 800ms ease;
+     }
+
+     .contact-form-error.is-active {
+      display: block;
+      animation: show-message 1s 1 normal 0s ease-out both;
+     }
+     
+     .none {
+      display: none;
+     }
+
+     @keyframes show-message {
+      0% {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
+     }
+
 
 
 
