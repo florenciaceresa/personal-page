@@ -107,7 +107,7 @@ function openModal(title, paragraph, imgSrc, link) {
 // Evento para abrir la ventana modal cuando se hace clic en el botón "open-project-1"
 document.querySelector(".open-project-1").addEventListener("click", (e) => {
     e.preventDefault();
-    openModal("PROYECTO 1", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, repellat ipsa, ipsum iure dolores placeat temporibus architecto laboriosam, veniam est adipisci aliquid enim.", "assets/img/diseñoapp.jpg", "elemento1.html");
+    openModal("PROYECTO 1", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, repellat ipsa, ipsum iure dolores placeat temporibus architecto laboriosam, veniam est adipisci aliquid enim.", "assets/img/diseñoapp.jpg", "project1.html");
 });
 
 // Evento para abrir la ventana modal cuando se hace clic en el botón "open-project-2"
