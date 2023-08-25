@@ -113,13 +113,13 @@ document.querySelector(".open-project-1").addEventListener("click", (e) => {
 // Evento para abrir la ventana modal cuando se hace clic en el botón "open-project-2"
 document.querySelector(".open-project-2").addEventListener("click", (e) => {
     e.preventDefault();
-    openModal("PROYECTO 2", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, repellat ipsa, ipsum iure dolores placeat temporibus architecto laboriosam, veniam est adipisci aliquid enim.", "assets/img/diseñografico.jpg", "elemento2.html");
+    openModal("PROYECTO 2", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, repellat ipsa, ipsum iure dolores placeat temporibus architecto laboriosam, veniam est adipisci aliquid enim.", "assets/img/diseñografico.jpg", "project2.html");
 });
 
 // Evento para abrir la ventana modal cuando se hace clic en el botón "open-project-3"
 document.querySelector(".open-project-3").addEventListener("click", (e) => {
     e.preventDefault();
-    openModal("PROYECTO 3", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, repellat ipsa, ipsum iure dolores placeat temporibus architecto laboriosam, veniam est adipisci aliquid enim.", "assets/img/diseñoweb.jpg", "elemento2.html");
+    openModal("PROYECTO 3", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, repellat ipsa, ipsum iure dolores placeat temporibus architecto laboriosam, veniam est adipisci aliquid enim.", "assets/img/diseñoweb.jpg", "project3.html");
 });
 
 // Evento para cerrar la ventana modal cuando se hace clic en el botón de cierre
