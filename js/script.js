@@ -130,6 +130,8 @@ closeModal.addEventListener("click", (e) => {
 
 
 
+
+
 //VALIDACIÓN FORMULARIO
 const d = document;
 
@@ -192,6 +194,31 @@ function contactFormValidations() {
 });
 }
 
+
+//DESCARGAR CV
+// Obtén una referencia al botón
+const botonDescargarPDF = document.getElementById('descargarPDF');
+
+// Agrega un evento clic al botón
+botonDescargarPDF.addEventListener('click', () => {
+    // URL del archivo PDF que deseas descargar
+    const urlPDF = 'assets/cv-florencia.pdf';
+
+    // Crea un elemento "a" (hipervínculo) invisible
+    const enlace = document.createElement('a');
+    enlace.href = urlPDF;
+
+    // Especifica que el enlace debe descargar el archivo en lugar de navegar a él
+    enlace.setAttribute('download', 'cv-florencia.pdf');
+
+    // Simula un clic en el enlace para iniciar la descarga
+    enlace.style.display = 'none';
+    document.body.appendChild(enlace);
+    enlace.click();
+
+    // Limpia el enlace después de la descarga
+    document.body.removeChild(enlace);
+});
 
 
 

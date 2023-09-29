@@ -138,18 +138,30 @@ span { /*Diseñadora y desarrolladora web*/
 
 
 /* --------- ABOUT --------- */
-#btn-1 {  /*Botón leer más*/
+.btn-1 {  /*Botón leer más*/
   color: var(--first-color);
   border: 1px solid var(--first-color);
   margin-top: 1.5rem;
 }
 
 
-#btn-1:hover {   /*Botón:hover leer más*/
+.btn-1:hover {   /*Botón:hover leer más*/
   color: #fff;
   background-color: var(--first-color);
 }
 
+.btn-2 {
+  background-color: var(--first-color);
+  margin-top: 1.5rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.btn-2:hover {
+  color: #fff;
+  background-color: var(--second-color);
+
+}
 
 .container-section { /*Contenedor de todas las secciones*/
   width: 95%; 
@@ -223,6 +235,7 @@ a {
 a:hover {
   color: var(--first-color);
 }
+
 
 
 div.container-section.projects { /*Ver más proyectos*/
